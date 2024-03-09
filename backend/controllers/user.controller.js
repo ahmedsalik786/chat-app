@@ -2,7 +2,7 @@ import User from "../models/user.model.js";
 
 export const getUserFromSidebar = async (req, res) => {
   try {
-    console.log("hello salik");
+    // console.log("hello salik");
 
     const loggedInUserId = req.user._id;
     const allUsers = await User.find({ _id: { $ne: loggedInUserId } }).select(
